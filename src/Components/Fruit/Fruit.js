@@ -2,7 +2,7 @@ import React from 'react';
 import './Fruit.css'
 const Fruit = (props) => {
     const{fruit}=props;
-    const{picture}=fruit
+    const{picture,name,price}=fruit
     
     return (
         
@@ -11,12 +11,12 @@ const Fruit = (props) => {
     <div className="card h-100">
       <img src={picture} className="card-img-top img-sizeing" alt=""/>
       <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p>Price</p>
+        <h2 className="card-title mt-5">{name}</h2>
+        <h5 className='mt-4'>Price:$ {price}</h5>
       </div>
-      <div className="card-footer">
-       <button>ADD To CART</button>
-      </div>
+      
+       <div><button className='btn w-100 btn-warning'>ADD To CART</button></div>
+     
     </div>
   </div>
       
