@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNoteSticky } from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react';
 import { useState } from 'react';
-import Cart from '../Cart/Cart';
 import Fruit from '../Fruit/Fruit';
 import './Fruits.css'
 
@@ -11,6 +10,7 @@ const Fruits = () => {
 
     const[fruits,setFruits]=useState([])
     const[carts,setCarts]=useState([])
+
     useEffect(()=>{
         fetch('data.json')
         .then(res=>res.json())
@@ -31,9 +31,11 @@ const Fruits = () => {
             
             {
                 carts.map((cart) =>
-                    <Cart  key={cart.id}
-                    cart={cart}
-                    ></Cart>
+                
+                <div key={cart.id} className='cart'>
+                    <p className='bg-secondary m-2 p-2 boder rounded postion-details'>{cart.name}</p>
+                </div>
+                  
                     )
             }
                  </div>

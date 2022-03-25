@@ -4,9 +4,9 @@ import React from 'react';
 import './Fruit.css'
 
 
-const Fruit = (props) => {
+const Fruit = (prop) => {
 
-    const{handleAddToCart,fruit}=props
+    const{handleAddToCart,fruit}=prop
     const{picture,name,price}=fruit
     
    
