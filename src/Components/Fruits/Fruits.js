@@ -25,7 +25,7 @@ const Fruits = () => {
                  <div className='col-12 col-lg-3 color'>
             <h1>Details</h1>
             {
-                carts.map(cart=><div className='bg-light m-2 p-2'>
+                carts.map(cart=><div className='bg-secondary m-2 p-2'>
                     {cart.name}
                     </div>)
             }

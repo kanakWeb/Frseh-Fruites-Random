@@ -10,14 +10,7 @@
 .card-sizing:hover{
     box-shadow: 2px 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
-.color{
-    background-color: antiquewhite;
-    color: chartreuse;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    position: sticky;
-}
+
 .button-size{
     position: absolute;
     bottom: 0;

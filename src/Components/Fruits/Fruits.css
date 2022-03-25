@@ -1,4 +1,12 @@
-.sizeing{
-    margin-left: 40px;
-    margin-right: 40px;
+.sizeing {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.color {
+  background-color: rgb(150, 149, 148);
+  color: chartreuse;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  position: sticky;
 }
