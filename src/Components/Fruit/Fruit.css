@@ -2,6 +2,14 @@
     width: 100%;
     height: 50%;
 }
+.card-sizing{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.card-sizing:hover{
+    box-shadow: 2px 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
 .color{
     background-color: antiquewhite;
     color: chartreuse;
@@ -9,4 +17,8 @@
     padding: 10px;
     border-radius: 10px;
     position: sticky;
+}
+.button-size{
+    position: absolute;
+    bottom: 0;
 }
