@@ -8,5 +8,9 @@
   text-align: center;
   padding: 10px;
   border-radius: 10px;
-  position: sticky;
+ 
+}
+.postion-details{
+    position: sticky;
+    top: 0;
 }

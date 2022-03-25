@@ -1,6 +1,9 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faNoteSticky } from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Cart from '../Cart/Cart';
 import Fruit from '../Fruit/Fruit';
 import './Fruits.css'
 
@@ -23,12 +26,18 @@ const Fruits = () => {
            <div className='sizeing py-4'>
                 <div className='row g-4'>
                  <div className='col-12 col-lg-3 color'>
-            <h1>Details</h1>
+                 <div className='postion-details'>
+                 <h1>Details <FontAwesomeIcon className='ps-2 me-0' icon={faNoteSticky}></FontAwesomeIcon ><sup className=' ms-0 ps-0'>{carts.length}</sup> </h1>
+            
             {
-                carts.map(cart=><div className='bg-secondary m-2 p-2'>
-                    {cart.name}
-                    </div>)
+                carts.map((cart) =>
+                    <Cart  key={cart.id}
+                    cart={cart}
+                    ></Cart>
+                    )
             }
+                 </div>
+           
                 </div>
 
                 {/* fruit items and cards */}
