@@ -3,14 +3,27 @@
   margin-right: 40px;
 }
 .color {
-  background-color: rgb(150, 149, 148);
+  background-color: rgb(122, 112, 102);
   color: chartreuse;
   text-align: center;
   padding: 10px;
   border-radius: 10px;
- 
 }
-.postion-details{
-    position: sticky;
-    top: 0;
+.postion-details {
+  position: sticky;
+  top: 0;
+}
+.image-modify {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+.cart p{
+    margin: 0;
+    padding: 0;
+}
+
+.cart{
+    display: flex;
+   align-items: center;
 }
