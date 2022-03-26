@@ -5,6 +5,10 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Fruit from '../Fruit/Fruit';
 import './Fruits.css'
+import Cart from '../Cart/Cart';
+
+
+
 
 const Fruits = () => {
 
@@ -17,6 +21,7 @@ const Fruits = () => {
         .then(data=>setFruits(data))
     },[])
 
+
     const handleAddToCart=(fruit)=>{
        const newCart=[...carts,fruit]
        if(newCart.length<=4){
@@ -28,9 +33,13 @@ const Fruits = () => {
        
     }
 
-   /*  const removeHandle=()={
-        setCarts()
-    } */
+
+    function randomHandler() {
+        let newIndex = Math.floor(Math.random(carts));
+        setCarts(newIndex);
+      }
+
+
     return (
       /* details item */
            <div className='sizeing py-4'>
@@ -40,19 +49,16 @@ const Fruits = () => {
                  <h1>Details <FontAwesomeIcon className='ps-2 me-0' icon={faNoteSticky}></FontAwesomeIcon ><sup className=' ms-0 ps-0'>{carts.length}</sup> </h1>
             
             {
-                // if(carts.length<=3){
-
-                // }
+            
                 
                 carts.map((cart) =>
-                
-                <div key={cart.id} className='cart'><img className='image-modify' src={cart.picture} alt=""/>
-                    <p className='m-2 p-2 boder rounded postion-details'>{cart.name}</p>
-                </div>
-                  
-                    )
+                <Cart
+                key={cart.id}
+                cart={cart}
+                ></Cart>  
+                 )
             }
-             <button /* onClick={()=>removeHandle}  */className='btn btn-danger mt-4'>Chose Again</button>
+             <button onClick={randomHandler} className='btn btn-danger mt-4'>Chose Again</button>
                  </div>
           
                 </div>

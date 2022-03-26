@@ -9,21 +9,4 @@
   padding: 10px;
   border-radius: 10px;
 }
-.postion-details {
-  position: sticky;
-  top: 0;
-}
-.image-modify {
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-}
-.cart p{
-    margin: 0;
-    padding: 0;
-}
 
-.cart{
-    display: flex;
-   align-items: center;
-}
