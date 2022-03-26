@@ -14,6 +14,7 @@ const Fruits = () => {
 
     const[fruits,setFruits]=useState([])
     const[carts,setCarts]=useState([])
+    const[random,setRandom]=useState({})
 
     useEffect(()=>{
         fetch('data.json')
@@ -21,6 +22,10 @@ const Fruits = () => {
         .then(data=>setFruits(data))
     },[])
 
+    const reseat=()=>{
+        setRandom([])
+        setCarts([])
+    }
 
     const handleAddToCart=(fruit)=>{
        const newCart=[...carts,fruit]
@@ -35,10 +40,11 @@ const Fruits = () => {
 
 
     function randomHandler(carts) {
-        const months = carts.name[0];
+        
 
-const random = Math.floor(Math.random() * months.length);
-console.log(random, months[random]);
+        const random = Math.floor(Math.random() * carts.length);
+        setRandom(carts[random])
+      
       }
 
 
@@ -58,15 +64,21 @@ console.log(random, months[random]);
                 <Cart
                 key={cart.id}
                 cart={cart}
+                
                 ></Cart>  
                  )
             }
+             <hr />
+             <p>One product selected</p><div key={random.id} className='cart'>
+                 <img className='image-modify' src={random.picture} alt=""/>
+                    <p className='m-2 p-2 boder rounded postion-details'>{random.name}</p>
+                </div>
 
              <div className='datails-btn-space'>
-             <button  className='btn btn-danger mt-4  w-100'>Chose one item</button>
+             <button onClick={()=>randomHandler(carts)} className='btn btn-danger mt-4  w-100'>Chose one item</button>
 
 
-                <button onClick={randomHandler} className='btn w-100 btn-warning mt-2'>Chose Again</button>
+                <button onClick={reseat} className='btn w-100 btn-warning mt-2'>Chose Again</button>
              </div>
                  </div>
           
@@ -82,6 +94,7 @@ console.log(random, months[random]);
                        handleAddToCart={handleAddToCart}
                     ></Fruit>)
                 }
+
             </div>
                 </div>
                
