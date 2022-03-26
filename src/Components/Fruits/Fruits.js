@@ -28,15 +28,17 @@ const Fruits = () => {
         setCarts(newCart);
        }
        else{
-           alert('Maximum 4 iteam Added ')
+           alert('Maximum 4 Iteam Add To Cart Available')
        }
        
     }
 
 
-    function randomHandler() {
-        let newIndex = Math.floor(Math.random(carts));
-        setCarts(newIndex);
+    function randomHandler(carts) {
+        const months = carts.name[0];
+
+const random = Math.floor(Math.random() * months.length);
+console.log(random, months[random]);
       }
 
 
