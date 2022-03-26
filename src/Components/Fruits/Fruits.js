@@ -33,7 +33,7 @@ const Fruits = () => {
         setCarts(newCart);
        }
        else{
-           alert('Maximum 4 Iteam Add To Cart Available')
+           alert('Maximum 4 Item Add To Cart Available')
        }
        
     }
@@ -75,10 +75,10 @@ const Fruits = () => {
                 </div>
 
              <div className='datails-btn-space'>
-             <button onClick={()=>randomHandler(carts)} className='btn btn-danger mt-4  w-100'>Chose one item</button>
+             <button onClick={()=>randomHandler(carts)} className='btn btn-danger mt-4  w-100'>Choose one item</button>
 
 
-                <button onClick={reseat} className='btn w-100 btn-warning mt-2'>Chose Again</button>
+                <button onClick={reseat} className='btn w-100 btn-warning mt-2'>Choose Again</button>
              </div>
                  </div>
           
