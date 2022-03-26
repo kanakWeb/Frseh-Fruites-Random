@@ -2,8 +2,7 @@ import React from 'react';
 import './Cart.css'
 
 const Cart = (prop) => {
-    const{cart,random}=prop
-    console.log(random);
+    const{cart}=prop
     return (
         <div>
              <div key={cart.id} className='cart'>
