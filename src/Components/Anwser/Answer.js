@@ -26,7 +26,7 @@ const Answer = () => {
                 <h2 className="accordion-header" id="flush-headingTwo">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        <p className="fs-4">What are the states and props in React?
+                        <p className="fs-4">What are the difference between State and Props?
 </p>
                     </button>
                 </h2>
