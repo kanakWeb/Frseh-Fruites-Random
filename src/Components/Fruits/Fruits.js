@@ -49,6 +49,7 @@ console.log(random, months[random]);
                  <div className='col-12 col-lg-3 color'>
                  <div className='postion-details'>
                  <h1>Details <FontAwesomeIcon className='ps-2 me-0' icon={faNoteSticky}></FontAwesomeIcon ><sup className=' ms-0 ps-0'>{carts.length}</sup> </h1>
+                 <h5>Item list:</h5>
             
             {
             
@@ -60,7 +61,13 @@ console.log(random, months[random]);
                 ></Cart>  
                  )
             }
-             <button onClick={randomHandler} className='btn btn-danger mt-4'>Chose Again</button>
+
+             <div className='datails-btn-space'>
+             <button  className='btn btn-danger mt-4  w-100'>Chose one item</button>
+
+
+                <button onClick={randomHandler} className='btn w-100 btn-warning mt-2'>Chose Again</button>
+             </div>
                  </div>
           
                 </div>
